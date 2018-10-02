@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<!-- TODO Injecter le bean ClientInfoRESTServiceImpl dans le bean ci-dessous -->
+	<bean id="identityControllerBean" class="tn.esprit.di.controller.IdentityControllerImpl" >
+	<property name="clientInfoService" ref="clientInfoServiceBean"/>
+	
+	</bean>
+	
+	<!-- TODO Injecter le bean ClientInfoRESTServiceImpl dans le bean ci-dessous -->
+	<bean id="projectControllerBean" class="tn.esprit.di.controller.ProjectControllerImpl" >
+	<property name="clientInfoService" ref="clientInfoServiceBean"/>
+	
+	</bean>
+	
+	<bean id="clientInfoServiceBean" class="tn.esprit.di.service.ClientInfoRESTServiceImpl" />
+	
+	
+</beans> 
